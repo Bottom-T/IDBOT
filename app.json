@@ -21,7 +21,7 @@
         },
         "UPDATE_CHANNEL": {
             "description": "Your Channel Username Without @",
-            "value": "BX_Botz"
+            "value": ""
         }
     },
     "buildpacks": [
