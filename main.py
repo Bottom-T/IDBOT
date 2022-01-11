@@ -10,11 +10,7 @@ Telegram = Client(
     api_hash = os.environ["API_HASH"]
 )
 
-@Telegram.on_message(filters.private & filters.command(["id"]))
 @Telegram.on_message(filters.private & filters.command(["start"]))
-@Telegram.on_message(filters.private & filters.command(["Id"]))
-@Telegram.on_message(filters.private & filters.command(["ID"]))
-@Telegram.on_message(filters.private & filters.command(["Id"]))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.id)
     reply_markup = START_BUTTON
