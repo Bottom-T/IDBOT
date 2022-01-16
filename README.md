@@ -29,7 +29,7 @@ License -> https://github.com/Bottom-T/IDBOT/blob/master/LICENSE
 <br/>
 
 ```sh
-git clone https://github.com/Bottom-T/IDBOT/tree/main
+git clone https://github.com/Bottom-T/IDBOT/tree/master
 cd IDBOT
 pip3 install -r requirements.txt
 # <Create Variables appropriately>
