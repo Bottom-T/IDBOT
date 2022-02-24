@@ -14,7 +14,7 @@ Telegram = Client(
     api_hash = os.environ["API_HASH"]
 
 
-START_TEXT = "Hi {first},Send Text To Write Him At Book! \n\nBy @us7a5"
+START_TEXT = "Hi ,Send Text To Write Him At Book! \n\nBy @us7a5"
 
 
 
