@@ -13,7 +13,7 @@ Telegram = Client(
 
 @Telegram.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
-    text = START_TEXT.format(update.from_mention)
+    text = START_TEXT.format(update.from_user.id)
     reply_markup = START_BUTTONS
     await update.reply_text(
         text=text,
