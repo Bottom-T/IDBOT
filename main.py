@@ -1,11 +1,6 @@
-import os
-from trakos import * 
-from time import sleep
-from user_agent import generate_user_agent
-#1
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from config import Config
+
  
 Telegram = Client(
     "Telegram ID Bot",
@@ -29,7 +24,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@Telegram.on_message(filters.private & filters.command(["start"]))
+@Client.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
