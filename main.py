@@ -24,10 +24,9 @@ async def start(bot, update):
 
 
 START_TEXT = """
-Hi {}
-Send Text To Write Him At Book
+𝚄𝚂𝙴𝚁 𝙸𝙳 💛💫 {}
 
-By @us7a5
+𝙱𝚈 @us7a5
 """
 
 
