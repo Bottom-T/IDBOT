@@ -41,4 +41,4 @@ async def start(bot, update):
     )
 
 
-Telegram.run()
+bot.run()
