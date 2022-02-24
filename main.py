@@ -14,7 +14,12 @@ Telegram = Client(
     api_hash = os.environ["API_HASH"]
 
 
-START_TEXT = "Hi ,Send Text To Write Him At Book! \n\nBy @us7a5"
+START_TEXT = """
+Hi {}
+Send Text To Write Him At Book
+
+By @us7a5
+"""
 
 
 
@@ -24,9 +29,6 @@ START_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-
-
-
 @Telegram.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
@@ -34,7 +36,3 @@ async def start(bot, update):
         reply_markup=START_BUTTONS,
         disable_web_page_preview=True
     )
-
-Telegram.polling(True)
-
-Telegram.run()
