@@ -12,7 +12,7 @@ Telegram = Client(
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"]
-)
+
 
 @Telegram.message_handler(commands=['start'])
 def start(message):
@@ -25,6 +25,6 @@ def Get(message):
     url = f"http://apis.xditya.me/write?text={msg}"
     Telegram.send_photo(message.chat.id,url,caption=f"<strong>Done\n@us7a5</strong>",parse_mode="html")
 
-        )
+        
 
 Telegram.run()
