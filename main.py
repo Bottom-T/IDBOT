@@ -16,8 +16,9 @@ Telegram = Client(
 
 @Telegram.message_handler(commands=['start'])
 def start(message):
+r = requests.session()
     first = message.from_user.first_name
-    bot.send_message(message.chat.id, text=f"**Hi {first},Send Text To Write Him At Book! \n\nBy @us7a5 **",parse_mode="markdown")
+    Telegram.send_message(message.chat.id, text=f"**Hi {first},Send Text To Write Him At Book! \n\nBy @us7a5 **",parse_mode="markdown")
 @Telegram.message_handler(func=lambda m: True)
 def Get(message):
     Telegram.send_message(message.chat.id,f"<strong>Wait Please.</strong>",parse_mode="html") 
