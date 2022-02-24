@@ -18,10 +18,7 @@
         },
         "API_HASH": {
             "description": "Your API_HASH Get From https://my.telegram.org/apps"
-        },
-        "UPDATE_CHANNEL": {
-            "description": "Your Channel Username Without @",
-            "value": ""
+        
         }
     },
     "buildpacks": [
