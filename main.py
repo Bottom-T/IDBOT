@@ -14,18 +14,28 @@ Telegram = Client(
     api_hash = os.environ["API_HASH"]
 
 
-@Telegram.message_handler(commands=['start'])
-def start(message):
-r = requests.session()
-    first = message.from_user.first_name
-    Telegram.send_message(message.chat.id, text=f"**Hi {first},Send Text To Write Him At Book! \n\nBy @us7a5 **",parse_mode="markdown")
-@Telegram.message_handler(func=lambda m: True)
-def Get(message):
-    Telegram.send_message(message.chat.id,f"<strong>Wait Please.</strong>",parse_mode="html") 
-    msg = message.text
-    url = f"http://apis.xditya.me/write?text={msg}"
-    Telegram.send_photo(message.chat.id,url,caption=f"<strong>Done\n@us7a5</strong>",parse_mode="html")
+START_TEXT = "Hi {first},Send Text To Write Him At Book! \n\nBy @us7a5"
 
-        
+
+
+START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/us7a5')
+        ]]
+    )
+
+msg = message.text
+url = f"http://apis.xditya.me/write?text={msg}"
+Telegram.send_photo(message.chat.id,url,caption=f"<strong>Done\n@us7a5</strong>",parse_mode="html")
+
+
+@Client.on_message(filters.private & filters.command(["start"]))
+async def start(bot, update):
+    await update.reply_text(
+        text=START_TEXT.format(update.from_user.mention),
+        reply_markup=START_BUTTONS,
+        disable_web_page_preview=True
+    )
+
 
 Telegram.run()
