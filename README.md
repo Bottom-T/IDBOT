@@ -8,7 +8,7 @@
 Made with Python3
 (C) @Bottom-T
 Copyright permission under MIT License
-License -> https://github.com/Bottom-T/IDBOT/blob/master/LICENSE
+License -> https://github.com/C2BoT/IDBOT/blob/master/LICENSE
 ```
 
 ---
@@ -18,7 +18,7 @@ License -> https://github.com/Bottom-T/IDBOT/blob/master/LICENSE
 <details><summary><b>Deploy To Heroku</b></summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/Bottom-T/IDBOT/tree/master">
+<a href="https://heroku.com/deploy?template=https://github.com/C2BoT/IDBOT/tree/master">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -29,7 +29,7 @@ License -> https://github.com/Bottom-T/IDBOT/blob/master/LICENSE
 <br/>
 
 ```sh
-git clone https://github.com/Bottom-T/IDBOT/tree/master
+git clone https://github.com/C2BoT/IDBOT/tree/master
 cd IDBOT
 pip3 install -r requirements.txt
 # <Create Variables appropriately>
